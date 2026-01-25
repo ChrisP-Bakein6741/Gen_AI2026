@@ -1,0 +1,75 @@
+|Trial | Temperature (T)| Predicted Behavior | Model Response |	Model Coherence (1-10)|
+|A | 0.1 |	Conservative |	
+the cat sat on the mat,
+the cat sat on the mat, and
+the cat sat on the mat, and the
+the cat sat on the mat, and the cat
+the cat sat on the mat, and the cat sat
+the cat sat on the mat, and the cat sat on
+the cat sat on the mat, and the cat sat on the
+the cat sat on the mat, and the cat sat on the mat
+the cat sat on the mat, and the cat sat on the mat,
+the cat sat on the mat, and the cat sat on the mat, and
+the cat sat on the mat, and the cat sat on the mat, and the
+the cat sat on the mat, and the cat sat on the mat, and the cat
+the cat sat on the mat, and the cat sat on the mat, and the cat sat
+the cat sat on the mat, and the cat sat on the mat, and the cat sat on
+the cat sat on the mat, and the cat sat on the mat, and the cat sat on the
+the cat sat on the mat, and the cat sat on the mat, and the cat sat on the mat
+the cat sat on the mat, and the cat sat on the mat, and the cat sat on the mat,
+the cat sat on the mat, and the cat sat on the mat, and the cat sat on the mat, and
+the cat sat on the mat, and the cat sat on the mat, and the cat sat on the mat, and the
+the cat sat on the mat, and the cat sat on the mat, and the cat sat on the mat, and the cat | 8/10 |
+|B | 0.8 |	Creative | 
+the cat sat on the mat,
+the cat sat on the mat, and
+the cat sat on the mat, and I
+the cat sat on the mat, and I felt
+the cat sat on the mat, and I felt a
+the cat sat on the mat, and I felt a warm
+the cat sat on the mat, and I felt a warm sensation
+the cat sat on the mat, and I felt a warm sensation in
+the cat sat on the mat, and I felt a warm sensation in my
+the cat sat on the mat, and I felt a warm sensation in my heart
+the cat sat on the mat, and I felt a warm sensation in my heart.
+the cat sat on the mat, and I felt a warm sensation in my heart. I
+the cat sat on the mat, and I felt a warm sensation in my heart. I put
+the cat sat on the mat, and I felt a warm sensation in my heart. I put my
+the cat sat on the mat, and I felt a warm sensation in my heart. I put my hand
+the cat sat on the mat, and I felt a warm sensation in my heart. I put my hand on
+the cat sat on the mat, and I felt a warm sensation in my heart. I put my hand on her
+the cat sat on the mat, and I felt a warm sensation in my heart. I put my hand on her head
+the cat sat on the mat, and I felt a warm sensation in my heart. I put my hand on her head and
+the cat sat on the mat, and I felt a warm sensation in my heart. I put my hand on her head and pulled | 9/10 |	
+|C | 2.0 |	Chaos | 
+the cat sat on the mat,
+the cat sat on the mat, its
+the cat sat on the mat, its legs
+the cat sat on the mat, its legs wrapped
+the cat sat on the mat, its legs wrapped in
+the cat sat on the mat, its legs wrapped in soft
+the cat sat on the mat, its legs wrapped in soft leather
+the cat sat on the mat, its legs wrapped in soft leather sheets
+the cat sat on the mat, its legs wrapped in soft leather sheets).
+the cat sat on the mat, its legs wrapped in soft leather sheets). My
+the cat sat on the mat, its legs wrapped in soft leather sheets). My favourite
+the cat sat on the mat, its legs wrapped in soft leather sheets). My favourite part
+the cat sat on the mat, its legs wrapped in soft leather sheets). My favourite part,
+the cat sat on the mat, its legs wrapped in soft leather sheets). My favourite part, to
+the cat sat on the mat, its legs wrapped in soft leather sheets). My favourite part, to do
+the cat sat on the mat, its legs wrapped in soft leather sheets). My favourite part, to do so
+the cat sat on the mat, its legs wrapped in soft leather sheets). My favourite part, to do so is
+the cat sat on the mat, its legs wrapped in soft leather sheets). My favourite part, to do so is the
+the cat sat on the mat, its legs wrapped in soft leather sheets). My favourite part, to do so is the little
+the cat sat on the mat, its legs wrapped in soft leather sheets). My favourite part, to do so is the little dog | 5 |	
+
+
+Did your model repeat any words or phrases?
+Yes on trial A it just repeated the same phrase.
+Did the model use real words, or did it start outputting random characters and punctuation? Explain how the "Probability Distribution" changed to allow this.
+For the most part the model did well with this. The only case of real randomness was the use ")" that appeared on line 53 in trial C. The appearance of the ")" is because of the change in the temperature. With the temperature cranked up to 2.0 the model's softmax function starts to make all of its known vocab more and more likely to be used to generate text regardless of the context of the prompt.
+If you were building a medical AI to give prescriptions or advice, which temperature would you use?
+I would use a temperature that is closer to the 0.8 trial run. Considering that it still used some creativity I may be interested in going slightly lower than the 0.8 temperature to ensure that the model is as accurate as possible.
+If you were building an AI to write a surrealist dream-journal, which would you use?
+I would use a temperature around 1.5 to make sure that the model is able to create grammatically correct sentences but still be creative enough to make an interesting story.
+
